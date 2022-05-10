@@ -1,6 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* Reset CSS */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Variable */
+:root{
+  --main-clr: #fff;
+  --secondary-clr: #000;
+}
+
+/* Config */
+html {
+  font-size: 62.5%;
+  line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+}
+
+#app {
+  font-size: 1.6rem;
+}
+
+/* Header */
+
