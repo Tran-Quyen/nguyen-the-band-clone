@@ -39,7 +39,8 @@ ul {
 /* Common */
 .wrapper {
   max-width: 80rem;
-  margin: 7.4rem auto 11.2rem;
+  padding: 7.4rem 0 11.2rem;
+  margin: 0 auto;
 }
 
 .band-title {
@@ -57,6 +58,22 @@ ul {
   font-style: italic;
   text-align: center;
   opacity: 0.6;
+}
+
+.bbtn {
+  display: block;
+  outline: none;
+  border: none;
+  min-width: 10.8rem;
+  height: 4rem;
+  color: var(--white-clr);
+  background: var(--black-clr);
+  text-transform: capitalize;
+}
+
+.bbtn:hover {
+  color: var(--black-clr);
+  background: var(--hover-clr);
 }
 
 /* App */
@@ -209,5 +226,179 @@ ul {
   display: block;
   width: 60%;
   margin: 0 auto;
+}
+
+/* Tour */
+.main .tour {
+  background: #000;
+}
+
+.tour .band-title {
+  color: var(--white-clr);
+}
+
+.tour .band-slogan {
+  color: var(--hover-clr);
+}
+
+.tour .ticket-list {
+  background: var(--white-clr);
+  margin: 3rem 0;
+  color: #757575;
+}
+
+.tour .ticket-list .ticket-item {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.tour .ticket-item .sold-out {
+  display: inline-block;
+  margin-left: 1.5rem;
+  background: #f44336;
+  color: var(--white-clr);
+  padding: 0 8px;
+}
+
+.tour .ticket-item .ticket-count {
+  --size: 2.6rem;
+  position: absolute;
+  top: 50%;
+  right: 3.2rem;
+  transform: translateY(-50%);
+  display: inline-block;
+  color: var(--white-clr);
+  background: var(--black-clr);
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  text-align: center;
+  border-radius: 50%;
+}
+
+.tour .place-list {
+  display: flex;
+  gap: 1.6rem;
+  background: #000;
+}
+
+.tour .place-list .place-item {
+  flex: 1 0 calc((100% - 2 * 1.6rem) / 3);
+}
+
+.tour .place-item .place-image {
+  max-width: 100%;
+}
+
+.tour .place-item .place-image:hover {
+  opacity: 0.6;
+}
+
+.tour .place-item .place-content {
+  padding: 1.6rem;
+  background: var(--white-clr);
+  font-size: 1.5rem;
+}
+
+.tour .place-content .place-title {
+  font-weight: bold;
+  font-size: inherit;
+}
+
+.tour .place-content .place-date {
+  margin: 1.8rem 0 1.6rem;
+  opacity: 0.7;
+}
+
+.tour .place-content .place-description {
+  text-align: justify;
+}
+
+/* Contact */
+.main .contact {
+}
+
+.contact .contact-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .contact-info-list {
+  flex: 1;
+}
+
+.contact .contact-info-item {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.contact .contact-info-item > span {
+  margin-left: 1.5rem;
+}
+
+.contact .contact-form {
+  flex: 1;
+}
+
+.contact .contact-form .form-wrap {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact .contact-form .form-wrap:last-child {
+  display: flex;
+  justify-content: end;
+}
+
+.contact .form-wrap .form-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.contact .form-wrap .bbtn {
+  text-transform: uppercase;
+}
+
+.footer {
+}
+
+.footer .map {
+  max-width: 100%;
+  filter: grayscale(50%);
+}
+
+.footer .footer-wrap {
+  padding: 7rem 0;
+}
+
+.footer .footer-wrap .socials {
+  display: flex;
+  justify-content: center;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer .footer-wrap .socials > a {
+  color: var(--black-clr);
+  opacity: 0.7;
+}
+
+.footer .footer-wrap .socials > a:hover {
+  opacity: 0.4;
+}
+
+.footer .footer-wrap .socials > a:not(:first-child) {
+  margin-left: 8px;
+}
+
+.footer .footer-wrap .copyright {
+  text-align: center;
+}
+
+.footer .footer-wrap .copyright > a {
+  text-transform: uppercase;
 }
 
