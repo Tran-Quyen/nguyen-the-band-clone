@@ -76,6 +76,10 @@ ul {
   background: var(--hover-clr);
 }
 
+.active {
+  display: block !important;
+}
+
 /* App */
 #app {
   font-size: 1.6rem;
@@ -94,10 +98,13 @@ ul {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 9999999;
+  background: var(--black-clr);
+}
+
+.header .nav-pc {
   display: flex;
   justify-content: space-between;
-  background: var(--black-clr);
-  z-index: 9999999;
 }
 
 .header .nav-list {
@@ -120,7 +127,8 @@ ul {
 }
 
 .header .nav-item:hover > a,
-.header .subnav-item:hover > a {
+.header .subnav-item:hover > a,
+.header .nav-mobile .nav-mobile-link:hover {
   color: var(--black-clr);
   background: var(--hover-clr);
 }
@@ -129,7 +137,7 @@ ul {
   padding-right: 3.6rem;
 }
 
-.header .nav-item a > i {
+.header .arrow-down {
   position: absolute;
   top: 50%;
   right: 2.4rem;
@@ -157,7 +165,7 @@ ul {
   display: block;
   font-size: 1.5rem;
   color: var(--black-clr);
-  padding: 8px 1.6rem;
+  padding: 8px 16px;
 }
 
 .header .search-icon {
@@ -168,6 +176,62 @@ ul {
 
 .header .search-icon:hover {
   background: #f44336;
+}
+
+/* Navbar Mobile */
+.header .nav-mobile {
+  display: none;
+  justify-content: space-between;
+}
+
+.header .nav-mobile .nav-mobile-link {
+  position: relative;
+  display: block;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  padding: 0 2.4rem;
+  font-size: 1.5rem;
+  color: var(--white-clr);
+  text-transform: uppercase;
+}
+
+.header .nav-mobile .nav-mobile-menu {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: var(--white-clr);
+  padding: 0 2.4rem;
+  font-size: 1.6rem;
+}
+
+.header .nav-mobile .nav-mobile-menu:hover {
+  color: var(--black-clr);
+  background: var(--hover-clr);
+}
+
+.header .nav-mobile .nav-mobile-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--black-clr);
+}
+
+.header .nav-mobile-list .nav-mobile-item {
+  position: relative;
+}
+
+.header .nav-mobile-item .arrow-down {
+  left: 7.5rem;
+}
+
+.header .nav-mobile-item .subnav-mobile-list {
+  display: none;
+  padding-left: 1rem;
+}
+
+.header .nav-mobile-list .subnav-mobile-item {
 }
 
 /* Main */
@@ -284,11 +348,11 @@ ul {
 }
 
 .tour .place-list .place-item {
-  flex: 1 0 calc((100% - 2 * 1.6rem) / 3);
+  flex: 1 1 calc((100% - 2 * 1.6rem) / 3);
 }
 
 .tour .place-item .place-image {
-  max-width: 100%;
+  width: 100%;
 }
 
 .tour .place-item .place-image:hover {
